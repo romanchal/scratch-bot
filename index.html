@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BotWorld Scratch</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header>
+    <img src="assets/logo.png" class="logo" alt="BotWorld Logo" />
+    <h1>BotWorld Scratch</h1>
+  </header>
+
+  <nav class="top-buttons">
+    <button onclick="goTo('earn')">💰 Earn More</button>
+    <button onclick="goTo('leaderboard')">🏆 Leaderboard</button>
+    <button onclick="showCashOut()">💸 Cash Out</button>
+  </nav>
+
+  <main>
+    <div class="scratch-box">
+      <canvas id="scratchCanvas" width="300" height="300"></canvas>
+      <div id="scratchContent">🎉 You Won ₹10</div>
+    </div>
+
+    <button class="invite-btn" onclick="copyReferral()">🔗 Invite & Earn</button>
+
+    <div class="step-cards">
+      <div class="step">
+        <h3>Step 1: Join Telegram Channel</h3>
+        <button class="red-btn" onclick="openJoinPopup()">Join @LIFAFA_CITY</button>
+      </div>
+      <div class="step">
+        <h3>Step 2: Subscribe YouTube</h3>
+        <a href="https://youtube.com/@funworld-ufo?si=7S7o2FtSz33tORuB" target="_blank" class="red-btn">Subscribe</a>
+      </div>
+    </div>
+
+    <!-- Join Channel Popup -->
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <h2>Join our Telegram Channel</h2>
+        <a href="https://t.me/LIFAFA_CITY" class="popup-link" target="_blank">@LIFAFA_CITY</a>
+        <button onclick="verifyJoin()" class="popup-btn">✅ I've Joined</button>
+      </div>
+    </div>
+
+    <!-- Cashout Section -->
+    <div id="cashout" class="cashout hidden">
+      <h2>Cash Out</h2>
+      <input type="text" placeholder="Your UPI ID" id="upi" />
+      <input type="text" placeholder="Phone Number" id="phone" />
+      <button onclick="submitUPI()">Submit</button>
+      <div id="upiList"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by BotWorld</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
