@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotWorld Scratch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Forced Channel Join Popup -->
+    <div id="joinChannelPopup">
+        <p>You must join our Telegram channel to continue!</p>
+        <a href="https://t.me/LIFAFA_CITY" target="_blank">Join Now</a>
+        <button onclick="checkSubscription()">I Joined</button>
+    </div>
+
+    <!-- Main Game Section -->
+    <div class="game-container">
+        <h1>Welcome to BotWorld Scratch</h1>
+
+        <!-- Scratch Card -->
+        <canvas id="scratchCanvas"></canvas>
+        <p id="scratchMessage">Scratch to reveal your reward!</p>
+
+        <!-- Cash Out Section -->
+        <div class="cashout-section">
+            <h2>Withdraw Money</h2>
+            <input type="text" id="upiId" placeholder="Enter UPI ID">
+            <input type="text" id="phoneNumber" placeholder="Enter Phone Number">
+            <button id="cashOutButton">Cash Out</button>
+        </div>
+
+        <!-- Refer & Earn Section -->
+        <div class="refer-section">
+            <h2>Invite & Earn</h2>
+            <button id="referButton">Refer & Earn</button>
+            <p>You earn 1 scratch per referral!</p>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h2>Top Referrers</h2>
+            <ul id="leaderboardList"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
