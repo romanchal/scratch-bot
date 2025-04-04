@@ -1,6 +1,0 @@
-{
-  "include": [
-    "functions/src",
-    "hosting/src"
-  ]
-}
